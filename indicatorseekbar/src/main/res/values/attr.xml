@@ -33,7 +33,11 @@
         <attr name="isb_track_rounded_corners" format="boolean" /><!-- set the track's both ends' shape to round-->
         //thumb text
         <attr name="isb_thumb_text_color" format="color|reference" /><!--set thumb's color, default #FF4081-->
-        <attr name="isb_show_thumb_text" format="boolean" /><!--show thumb text or not, default false-->
+        <attr name="isb_show_thumb_text" format="enum" ><!--show thumb text or not, default false-->
+            <enum name="none" value="0" />
+            <enum name="inside" value="1" />
+            <enum name="below" value="2" />
+        </attr>
         //thumb
         <attr name="isb_thumb_size" format="dimension|reference" /><!--set thumb's size, default 14dp, thumb size will be limited in 30dp-->
         <attr name="isb_thumb_color" format="color|reference" /><!--set thumb's color, default #FF4081-->

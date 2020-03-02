@@ -54,7 +54,7 @@ public class Builder {
     boolean trackRoundedCorners = false;
     //thumbText
     int thumbTextColor = Color.parseColor("#FF4081");
-    boolean showThumbText = false;
+    int showThumbTextType = ThumbTextType.NONE;
     //thumb
     int thumbSize = 0;
     int thumbColor = Color.parseColor("#FF4081");
@@ -360,11 +360,14 @@ public class Builder {
     /**
      * call this method to show the text below thumb or not
      *
-     * @param showThumbText show the text below thumb or not
+     * @param showThumbTextType show the text below/inside thumb or not see{@link ThumbTextType}
+     *      *                          ThumbTextType.NONE;
+     *      *                          ThumbTextType.INSIDE;
+     *      *                          ThumbTextType.BELOW;
      * @return Builder
      */
-    public Builder showThumbText(boolean showThumbText) {
-        this.showThumbText = showThumbText;
+    public Builder showThumbTextType(@ThumbTextType int showThumbTextType) {
+        this.showThumbTextType = showThumbTextType;
         return this;
     }
 

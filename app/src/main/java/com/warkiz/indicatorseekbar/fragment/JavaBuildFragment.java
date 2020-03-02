@@ -13,6 +13,7 @@ import com.warkiz.indicatorseekbar.R;
 import com.warkiz.widget.IndicatorSeekBar;
 import com.warkiz.widget.IndicatorStayLayout;
 import com.warkiz.widget.IndicatorType;
+import com.warkiz.widget.ThumbTextType;
 import com.warkiz.widget.TickMarkType;
 
 /**
@@ -49,7 +50,7 @@ public class JavaBuildFragment extends BaseFragment {
                 .trackProgressSize(4)
                 .trackBackgroundColor(getResources().getColor(R.color.color_gray, null))
                 .trackBackgroundSize(2)
-                .showThumbText(true)
+                .showThumbTextType(ThumbTextType.BELOW)
                 .thumbTextColor(getResources().getColor(R.color.color_gray, null))
                 .build();
 
