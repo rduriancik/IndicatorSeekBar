@@ -142,6 +142,7 @@ public class IndicatorSeekBar extends View {
     //thumb text
     private int mShowThumbTextType;//the place where the thumb text show .
     private float mThumbTextY;//the thumb text's drawing Y anchor
+    private float mInitialThumbTextY;
     private int mThumbTextColor;
     private boolean mHideThumb;
     private boolean mAdjustAuto;
@@ -220,6 +221,7 @@ public class IndicatorSeekBar extends View {
         //thumb text
         mShowThumbTextType = ta.getInt(R.styleable.IndicatorSeekBar_isb_show_thumb_text, builder.showThumbTextType);
         mThumbTextColor = ta.getColor(R.styleable.IndicatorSeekBar_isb_thumb_text_color, builder.thumbTextColor);
+        mInitialThumbTextY = ta.getDimensionPixelSize(R.styleable.IndicatorSeekBar_isb_thumb_text_y, 0/*builder.thumbTextY*/);
         //tickMarks
         mTicksCount = ta.getInt(R.styleable.IndicatorSeekBar_isb_ticks_count, builder.tickCount);
         mShowTickMarksType = ta.getInt(R.styleable.IndicatorSeekBar_isb_show_tick_marks_type, builder.showTickMarksType);
@@ -407,8 +409,11 @@ public class IndicatorSeekBar extends View {
                 case ThumbTextType.INSIDE:
                     mThumbTextY = mPaddingTop + mThumbTouchRadius + mTextPaint.descent() + (mBackgroundTrackSize / 2.0f);
                     break;
+                case ThumbTextType.FLOATING:
+                    mThumbTextY = mPaddingTop + mInitialThumbTextY;
+                    break;
                 default:
-                    mThumbTextY = 0;
+                    mThumbTextY = mPaddingTop;
             }
         }
         //init tick's X and text's X location;

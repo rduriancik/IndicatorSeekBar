@@ -37,7 +37,9 @@
             <enum name="none" value="0" />
             <enum name="inside" value="1" />
             <enum name="below" value="2" />
+            <enum name="floating" value="3" />
         </attr>
+        <attr name="isb_thumb_text_y" format="dimension" />
         //thumb
         <attr name="isb_thumb_size" format="dimension|reference" /><!--set thumb's size, default 14dp, thumb size will be limited in 30dp-->
         <attr name="isb_thumb_color" format="color|reference" /><!--set thumb's color, default #FF4081-->

@@ -18,4 +18,6 @@ public @interface ThumbTextType {
     int INSIDE = 1;
 
     int BELOW = 2;
+
+    int FLOATING = 3;
 }

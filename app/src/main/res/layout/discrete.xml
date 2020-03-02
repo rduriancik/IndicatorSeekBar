@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#000"
         android:orientation="vertical">
 
         <TextView
@@ -23,7 +24,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:isb_progress="0"
-            app:isb_show_thumb_text="inside"
+            android:background="#000"
+            app:isb_show_thumb_text="floating"
+            app:isb_thumb_text_y="0dp"
             app:isb_thumb_text_color="#FFF"
             app:isb_tick_marks_size="3dp"
             app:isb_tick_texts_size="10sp"
