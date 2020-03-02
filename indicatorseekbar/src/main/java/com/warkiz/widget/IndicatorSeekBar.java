@@ -375,7 +375,8 @@ public class IndicatorSeekBar extends View {
     {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int height = Math.round(mCustomDrawableMaxHeight + getPaddingTop() + getPaddingBottom());
-        setMeasuredDimension(resolveSize(SizeUtils.dp2px(mContext, 170), widthMeasureSpec), height + mTickTextsHeight);
+        int tickTextHeight = mShowThumbTextType == ThumbTextType.INSIDE || mShowThumbTextType == ThumbTextType.FLOATING ? 0 : mTickTextsHeight;
+        setMeasuredDimension(resolveSize(SizeUtils.dp2px(mContext, 170), widthMeasureSpec), height + tickTextHeight);
         initSeekBarInfo();
         refreshSeekBarLocation();
     }

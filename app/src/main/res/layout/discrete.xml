@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             app:isb_progress="0"
             android:background="#000"
-            app:isb_show_thumb_text="floating"
+            app:isb_show_thumb_text="inside"
             app:isb_thumb_text_y="0dp"
             app:isb_thumb_text_color="#FFF"
             app:isb_tick_marks_size="3dp"
